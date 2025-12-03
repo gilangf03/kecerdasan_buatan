@@ -1,0 +1,88 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["Hai", "Apa kabar?", "Ada orang?", "Halo", "Hei", "Selamat pagi", "Selamat siang", "Selamat malam"],
+      "responses": ["Halo, ada yang bisa saya bantu?", "Senang bertemu lagi denganmu!", "Hai, bagaimana saya bisa membantu?"],
+      "context": [""]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "Sampai jumpa", "Dadah", "Sampai nanti", "Saya pergi dulu"],
+      "responses": ["Sampai jumpa!", "Semoga harimu menyenangkan!", "Dadah, datang lagi ya."],
+      "context": [""]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Terima kasih", "Makasih", "Makasih banyak", "Bantuannya bagus", "Keren, makasih"],
+      "responses": ["Senang bisa membantu!", "Kapan saja!", "Sama-sama!"],
+      "context": [""]
+    },
+    {
+      "tag": "noanswer",
+      "patterns": [],
+      "responses": ["Maaf, saya tidak mengerti.", "Bisa jelaskan lebih detail?", "Hmm… saya belum paham maksudmu."],
+      "context": [""]
+    },
+    {
+      "tag": "options",
+      "patterns": ["Apa yang bisa kamu lakukan?", "Kamu bisa bantu apa?", "Fitur apa saja yang kamu punya?", "Bisa bantu saya apa?", "Ada dukungan apa?"],
+      "responses": ["Saya bisa membantu mengakses data Reaksi Obat, Tekanan Darah, Rumah Sakit, dan Apotek.", "Saya bisa membantu terkait Reaksi obat, Tekanan darah, Rumah sakit, dan Apotek."],
+      "context": [""]
+    },
+    {
+      "tag": "adverse_drug",
+      "patterns": ["Bagaimana cara cek reaksi obat?", "Buka modul reaksi obat", "Tampilkan daftar obat yang menimbulkan reaksi buruk", "Obat apa saja yang aman untuk pasien sensitif?", "Obat yang tidak memiliki reaksi buruk apa saja?"],
+      "responses": ["Membuka modul Reaksi Obat…"],
+      "context": [""]
+    },
+    {
+      "tag": "blood_pressure",
+      "patterns": ["Buka modul tekanan darah", "Tugas tentang tekanan darah", "Input tekanan darah", "Saya ingin catat tekanan darah", "Manajemen data tekanan darah"],
+      "responses": ["Membuka modul Tekanan Darah…"],
+      "context": [""]
+    },
+    {
+      "tag": "blood_pressure_search",
+      "patterns": ["Saya ingin mencari riwayat tekanan darah", "Tekanan darah pasien", "Tampilkan hasil tekanan darah", "Cari data tekanan darah pasien", "Temukan riwayat tekanan darah berdasarkan ID"],
+      "responses": ["Silakan berikan ID pasien.", "Boleh minta ID pasiennya?"],
+      "context": ["search_blood_pressure_by_patient_id"]
+    },
+    {
+      "tag": "search_blood_pressure_by_patient_id",
+      "patterns": [],
+      "responses": ["Memuat hasil tekanan darah pasien…"],
+      "context": [""]
+    },
+    {
+      "tag": "pharmacy_search",
+      "patterns": ["Cari apotek", "Tunjukkan apotek terdekat", "Daftar apotek", "Lokasi apotek", "Saya ingin mencari apotek"],
+      "responses": ["Silakan berikan nama apotek."],
+      "context": ["search_pharmacy_by_name"]
+    },
+    {
+      "tag": "search_pharmacy_by_name",
+      "patterns": [],
+      "responses": ["Memuat detail apotek…"],
+      "context": [""]
+    },
+    {
+      "tag": "hospital_search",
+      "patterns": ["Cari rumah sakit", "Saya ingin mencari data rumah sakit", "Butuh rumah sakit untuk rujukan", "Mencari detail rumah sakit", "Lokasi rumah sakit"],
+      "responses": ["Silakan berikan nama atau lokasi rumah sakit."],
+      "context": ["search_hospital_by_params"]
+    },
+    {
+      "tag": "search_hospital_by_params",
+      "patterns": [],
+      "responses": ["Silakan berikan tipe rumah sakit."],
+      "context": ["search_hospital_by_type"]
+    },
+    {
+      "tag": "search_hospital_by_type",
+      "patterns": [],
+      "responses": ["Memuat detail rumah sakit…"],
+      "context": [""]
+    }
+  ]
+}
